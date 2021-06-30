@@ -1,8 +1,10 @@
 $primary-color: #444; //variables
 $secondary-color:#E9896A;
 $back-color:#444E;
+$third-color:#FCECDD;
 $show-home-image:true;
 $home-image:url(/dist/images/background.jpg);
+$portrait-image:url(/dist/images/japanese.png);
 $background-opacity: 0.5;
 
 @mixin easeOut { //function for transitions of icons
