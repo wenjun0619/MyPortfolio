@@ -4,7 +4,7 @@ $back-color:#444E;
 $third-color:#FCECDD;
 $show-home-image:true;
 $home-image:url(/dist/images/background.jpg);
-$portrait-image:url(/dist/images/japanese.png);
+$portrait-image:url(/dist/images/japanese1.png);
 $background-opacity: 0.5;
 
 @mixin easeOut { //function for transitions of icons
@@ -29,5 +29,36 @@ $background-opacity: 0.5;
             z-index: -1;
             background: rgba($back-color,$background-opacity);
         }
+    }
+}
+
+// media queries are used to maka pages responsives by applying css rules and styles and properties only if a certain conditions is true.
+
+
+@mixin mediaSm {
+    @media screen and (max-width:500px) {
+        //any css that we put inside here will only apply if the screen is 500px or less
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width:768px) {
+        //any css that we put inside here will only apply if the screen is 500px or less
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width:1170px) {
+        //any css that we put inside here will only apply if the screen is 500px or less
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width:1171px){
+        //any css that we put inside here will only apply if the screen is 500px or less
+        @content;
     }
 }
