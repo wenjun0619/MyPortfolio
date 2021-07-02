@@ -4,6 +4,7 @@ $back-color:#444E;
 $third-color:#FCECDD;
 $show-home-image:true;
 $home-image:url(/dist/images/background.jpg);
+$home-image2:url(/dist/images/background-2.jpg);
 $portrait-image:url(/dist/images/japanese1.png);
 $background-opacity: 0.5;
 
@@ -18,6 +19,13 @@ $background-opacity: 0.5;
             background: $home-image;
             background-attachment: fixed;
             background-size: cover;
+        }
+
+        &#bg-img-2{
+            background: $home-image2;
+            background-attachment: fixed;
+            background-size: cover;
+            opacity: 0.9;
         }
 
         .overlay{

@@ -62,7 +62,7 @@ main{
             &:hover{ //a:hover nested css
                 color: $secondary-color;
                 @include easeOut();
-                font-size: 2em;
+                font-size: 1.2em;
             }
         }
     }
@@ -73,4 +73,131 @@ main{
             margin-top: 20vh;
         }
     }
+}
+
+.about-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bioimage bio bio'
+    'skill1 skill2 skill3';
+    grid-template-columns: repeat(3,1fr);
+}
+
+.bio-image{
+    grid-area:bioimage;
+    margin: auto;
+    border-radius: 50%;
+
+
+}
+
+.bio{
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+
+.skill-1{
+
+    grid-area: skill1;
+    text-align: center;
+    
+    
+
+    p{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 28px;
+        color: $secondary-color;
+        padding: 1em;
+        
+    }
+
+
+    
+}
+
+.nested{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:5px;
+    grid-gap:1em;
+   
+    
+}
+
+.nested2{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:5px;
+    grid-gap:1em;
+}
+.skill-2{
+    grid-area: skill2;
+
+    p{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 28px;
+        color: $secondary-color;
+        text-align: center;
+        padding: 1em;
+        
+    }
+}
+
+.skill-3{
+    grid-area: skill3;
+    
+    p{
+        font-size: 20px;
+        
+    }
+    h3{
+        font-size: 28px;
+        color: $secondary-color;
+        text-align: center;
+        padding: 1em;
+        
+        
+    }
+}
+
+.nested3{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:5px;
+    grid-gap:1em;
+    
+    
+    div{
+        padding: 0;
+        margin: 0;
+    }
+
+    p{
+        padding: 0;
+        margin: 0;
+    }
+
+
+}
+
+.skill{
+    background: rgba($color:$primary-color, $alpha: 0.5);
+    border-bottom: solid 5px $secondary-color;
+}
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    color:$secondary-color;
+    background-color: darken($color:$primary-color, $amount:10);
+    height: 75px;
 }

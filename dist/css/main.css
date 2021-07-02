@@ -79,6 +79,8 @@
       color: #E9896A;
       font-size: 36px;
       transition: all 0.5s ease-out; }
+    .menu .nav-link.current {
+      color: #E9896A; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.2s; }
@@ -135,6 +137,11 @@ body {
     background: url(/dist/images/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
+  body#bg-img-2 {
+    background: url(/dist/images/background-2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9; }
   body .overlay {
     position: absolute;
     top: 0;
@@ -175,8 +182,91 @@ main {
       main .icons a:hover {
         color: #E9896A;
         transition: all 0.5s ease-out;
-        font-size: 2em; }
+        font-size: 1.2em; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'skill1 skill2 skill3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.skill-1 {
+  grid-area: skill1;
+  text-align: center; }
+  .skill-1 p {
+    font-size: 20px; }
+  .skill-1 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    padding: 1em; }
+
+.nested {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+
+.nested2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+
+.skill-2 {
+  grid-area: skill2; }
+  .skill-2 p {
+    font-size: 20px; }
+  .skill-2 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    text-align: center;
+    padding: 1em; }
+
+.skill-3 {
+  grid-area: skill3; }
+  .skill-3 p {
+    font-size: 20px; }
+  .skill-3 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    text-align: center;
+    padding: 1em; }
+
+.nested3 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+  .nested3 div {
+    padding: 0;
+    margin: 0; }
+  .nested3 p {
+    padding: 0;
+    margin: 0; }
+
+.skill {
+  background: rgba(68, 68, 68, 0.5);
+  border-bottom: solid 5px #E9896A; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #E9896A;
+  background-color: #2b2b2b;
+  height: 75px; }
