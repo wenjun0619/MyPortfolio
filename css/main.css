@@ -58,7 +58,7 @@
     .menu-branding .portrait {
       width: 256px;
       height: 256px;
-      background-image: url(/dist/images/japanese1.png);
+      background-image: url(../images//japanese1.png);
       border-radius: 70%;
       border: solid 6px #E9896A; }
   .menu .nav-item {
@@ -105,11 +105,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(/dist/images/background.jpg);
+    background: url(../images/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
   body#bg-img-2 {
-    background: url(/dist/images/background-2.jpg);
+    background: url(../images/background-2.jpg);
     background-attachment: scroll;
     background-size: cover;
     opacity: 0.9;
