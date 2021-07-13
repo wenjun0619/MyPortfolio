@@ -1,0 +1,281 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      background-color: #E9896A;
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0;
+      visibility: hidden; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      background-color: #E9896A;
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(233, 137, 106, 0.4);
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: rgba(252, 236, 221, 0.9);
+    transition: all 0.5s ease-out;
+    transform: translate3d(0, 100%, 0); }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 256px;
+      height: 256px;
+      background-image: url(/dist/images/japanese1.png);
+      border-radius: 70%;
+      border: solid 6px #E9896A; }
+  .menu .nav-item {
+    transform: translate3d(0, -600px, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem 0;
+    font-weight: 400;
+    color: #F8F1F1;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #E9896A;
+      font-size: 36px;
+      transition: all 0.5s ease-out; }
+    .menu .nav-link.current {
+      color: #E9896A; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.6s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.8s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #444;
+  color: white;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(/dist/images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+  body#bg-img-2 {
+    background: url(/dist/images/background-2.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    opacity: 0.9;
+    z-index: -10;
+    color: #FFF8D9; }
+  body .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(68, 68, 68, 0.5); }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #E9896A; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 75px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #E9896A;
+        transition: all 0.5s ease-out;
+        font-size: 1.2em; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'skill1 skill2 skill3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.skill-1 {
+  grid-area: skill1;
+  text-align: center; }
+  .skill-1 p {
+    font-size: 20px; }
+  .skill-1 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    padding: 1em; }
+
+.nested {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+  .nested .word {
+    color: #E9896A; }
+
+.nested2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+
+.skill-2 {
+  grid-area: skill2; }
+  .skill-2 p {
+    font-size: 20px; }
+  .skill-2 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    text-align: center;
+    padding: 1em; }
+  .skill-2 .word {
+    color: #E9896A; }
+
+.skill-3 {
+  grid-area: skill3; }
+  .skill-3 p {
+    font-size: 20px; }
+  .skill-3 h3 {
+    font-size: 28px;
+    color: #E9896A;
+    text-align: center;
+    padding: 1em; }
+
+.nested3 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5px;
+  grid-gap: 1em; }
+  .nested3 div {
+    padding: 0;
+    margin: 0; }
+  .nested3 p {
+    padding: 0;
+    margin: 0; }
+
+.skill {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: solid 5px #E9896A; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #E9896A;
+  background: rgba(0, 0, 0, 0.2);
+  height: 75px; }
+
+@media screen and (max-width: 768px) {
+  main {
+    text-align: center;
+    align-items: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url(/dist/images/japanese2.png);
+      width: 128px;
+      height: 128px; }
+  .about-info {
+    grid-template: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
