@@ -192,6 +192,8 @@ main {
   grid-template-columns: repeat(3, 1fr);
   padding: 5px;
   grid-gap: 1em; }
+  .nested .word {
+    color: #E9896A; }
 
 .nested2 {
   text-align: center;
@@ -209,6 +211,8 @@ main {
     color: #E9896A;
     text-align: center;
     padding: 1em; }
+  .skill-2 .word {
+    color: #E9896A; }
 
 .skill-3 {
   grid-area: skill3; }

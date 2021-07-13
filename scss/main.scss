@@ -131,7 +131,9 @@ main{
     padding:5px;
     grid-gap:1em;
    
-    
+    .word{
+        color:$secondary-color;
+    }
 }
 
 .nested2{
@@ -153,6 +155,10 @@ main{
         text-align: center;
         padding: 1em;
         
+    }
+
+    .word{
+        color: $secondary-color;
     }
 }
 
